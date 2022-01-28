@@ -99,9 +99,9 @@ const hbs = require('hbs');
 // get the movie model
 const Movie = require("./models/Movie.model");
 
-movies.forEach(async (movie) => {
-  await Movie.create(movie);
-});
+// movies.forEach(async (movie) => {
+//   await Movie.create(movie);
+// });
 
 
 const app = express();

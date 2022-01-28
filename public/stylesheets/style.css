@@ -6,3 +6,26 @@ body {
 a {
   color: #00B7FF;
 }
+
+.container {
+  width: 100%;
+  background-image: url('/images/cinema.jpg');
+  background-position: left top;
+  height: 700px;
+  background-repeat: no-repeat;
+  display: flex;
+  background-size: cover;
+  justify-content: end;
+  
+}
+
+.home-title > h1 {
+  color: white;
+  font-size: 4.5rem;
+}
+
+.home-title > button {
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+}
