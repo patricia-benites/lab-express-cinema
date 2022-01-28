@@ -7,13 +7,23 @@ router.get('/', (req, res, next) => res.render('index'));
 
 
 // movies route
-router.get('/movies', (trq,res,next) => {
+router.get('/movies', (req,res,next) => {
     Movie.find()
         .then(movies => {
             res.render('movies', {movies});
         })
         .catch((err) => console.log('Something went wrong',err));
 
-}); 
+});
+
+router.get('/movie/:id', (req,res,next) => {
+    const movieId = req.params.id;
+    Movie.findById(movieId)
+        .then(movie => {
+            res.render('movie-details', {movie});
+        })
+        .catch((err) => console.log('Something went wrong',err));
+
+});
 
 module.exports = router;
